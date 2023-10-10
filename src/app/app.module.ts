@@ -6,20 +6,20 @@ import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { AboutUsComponent } from './components/components/about-us/about-us.component';
-import { ContactMeComponent } from './components/components/contact-me/contact-me.component';
-import { NavbarComponent } from './components/components/navbar/navbar.component';
-import { FooterComponent } from './components/components/footer/footer.component';
-import { HomeComponent } from './components/components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
-import { LoginComponent } from './components/components/login/login.component';
+import { LoginComponent } from './components/login/login.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
-    ContactMeComponent,
+    ContactUsComponent,
     NavbarComponent,
     FooterComponent,
     HomeComponent,
