@@ -14,7 +14,7 @@ import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ShiftPageComponent } from './components/shift-page/shift-page.component';
-
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { ShiftPageComponent } from './components/shift-page/shift-page.component
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
