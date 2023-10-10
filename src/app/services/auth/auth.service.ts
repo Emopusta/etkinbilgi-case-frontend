@@ -12,7 +12,7 @@ import { LoginModel } from 'src/app/models/login-model';
 export class AuthService {
   
 
-  apiUrl = ""
+  apiUrl = "http://localhost:60805/api/Auth/"
   constructor(private httpClient:HttpClient) { }
     
   login(loginModel:LoginModel){
