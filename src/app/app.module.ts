@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { ShiftPageComponent } from './components/shift-page/shift-page.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    ShiftPageComponent,
   ],
   imports: [
     BrowserModule,
