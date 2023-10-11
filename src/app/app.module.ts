@@ -15,6 +15,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ShiftPageComponent } from './components/shift-page/shift-page.component';
 import { MatTableModule } from '@angular/material/table';
+import { PersonnelComponent } from './components/personnel/personnel.component';
+import { AddPersonnelComponent } from './components/personnel/add-personnel/add-personnel.component';
+import { ListPersonnelComponent } from './components/personnel/list-personnel/list-personnel.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     LoginComponent,
     ShiftPageComponent,
+    PersonnelComponent,
+    AddPersonnelComponent,
+    ListPersonnelComponent,
   ],
   imports: [
     BrowserModule,
