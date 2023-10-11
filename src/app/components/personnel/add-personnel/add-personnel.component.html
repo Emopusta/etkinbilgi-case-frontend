@@ -1,2 +1,46 @@
-<p>add-personnel works!</p>
-asfasdgasdg
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <h2>Personel Ekle</h2>
+        <p class="lead">Personel ekleme arayüzüne hoş geldiniz.</p>
+      </div>
+  
+      <div class="row g-5">
+        <form [formGroup]="personnelForm" class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-12">
+                <label class="form-label">Kullanıcı Email</label>
+                <input
+                  formControlName="email"
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder=""
+                  value=""
+                  required=""
+                />
+                <div class="invalid-feedback">Valid userEmail is required.</div>
+              </div>
+            
+    
+  
+          </div>
+          <br />
+          <label for="blogDescription" class="form-label"
+          >Personel Profil Görseli</label
+        >
+          <div class="input-group mb-3">
+            <input type="file" class="form-control file-input" id="inputGroupFile01" (change)="onImageSelect($event)" />
+            <label class="input-group-text" for="inputGroupFile02">Yükle</label
+            >
+          </div>
+          <br />
+          <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="savePersonnel()">
+            Personeli Kaydet
+          </button>
+        </form>
+      </div>
+      <br />
+    </main>
+  </div>
+  
