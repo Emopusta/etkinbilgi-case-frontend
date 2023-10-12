@@ -1,0 +1,71 @@
+/* Style the DataTable */
+#dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Style the table header */
+  #dataTable thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #dataTable th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Style the table body */
+  #dataTable tbody {
+    background-color: #f9f9f9;
+  }
+  
+  #dataTable td {
+    padding: 10px;
+  }
+  
+  /* Add hover effect to table rows */
+  #dataTable tbody tr:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the table pagination (if used) */
+  .dataTables_paginate {
+    margin-top: 10px;
+  }
+  
+  /* Style the search input box */
+  .dataTables_filter input {
+    width: 300px;
+    padding: 5px;
+  }
+  
+  /* Style the "Show X entries" select box */
+  .dataTables_length select {
+    width: 80px;
+  }
+  
+  /* Style the "Previous" and "Next" buttons */
+  .dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Style the current page button */
+  .dataTables_paginate .paginate_button.current {
+    background-color: #333;
+  }
+  
+  /* Remove default styles for DataTable info and "Showing X of Y" text */
+  .dataTables_info,
+  .dataTables_paginate .pagination {
+    display: none;
+  }
+  

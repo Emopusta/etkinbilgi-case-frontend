@@ -9,7 +9,7 @@ import { PersonnelService } from 'src/app/services/personnel/personnel.service';
   styleUrls: ['./list-personnel.component.css']
 })
 export class ListPersonnelComponent implements OnInit{
-  counter:number[] = [];
+ 
   
   personnels:PersonnelDetailModel[] = [];
   displayedColumns:string[] = [];
@@ -31,31 +31,10 @@ export class ListPersonnelComponent implements OnInit{
         this.personnels.push(personnel);
       });
       
-      // for (let i = 0; i < this.pages; i++) {
-      //   this.counter.push(i);
-      // }
+     
       this.displayedColumns = ["id", "userId", "email", "firstName", "lastName", "image"];
-      console.log(this.personnels);
       });
       
   }
-  // nextButton(){
-  //   this.index++;
-  //   this.personnels = [];
-  //   this.counter = [];
-  //   this.ngOnInit()
-  // }
-
-  // previousButton(){
-  //   this.index--;
-  //   this.personnels = [];
-  //   this.counter = [];
-  //   this.ngOnInit()
-  // }
-  // spesificButton(index:number){
-  //   this.index = index;
-  //   this.personnels = [];
-  //   this.counter = [];
-  //   this.ngOnInit()
-  // }
+  
 }
