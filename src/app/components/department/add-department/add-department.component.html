@@ -1,0 +1,35 @@
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <h2>Departman Ekle</h2>
+        <p class="lead">Departman ekleme arayüzüne hoş geldiniz.</p>
+      </div>
+  
+      <div class="row g-5">
+        <form [formGroup]="departmentForm" class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-12">
+                <label class="form-label">Departman Adı</label>
+                <input
+                  formControlName="department"
+                  type="text"
+                  class="form-control"
+                  id="department"
+                  placeholder=""
+                  value=""
+                  required=""
+                />
+                <div class="invalid-feedback">Valid department is required.</div>
+              </div>
+              
+          </div>
+          <br />
+          <button class="w-100 btn btn-primary btn-lg" type="submit" (click)="saveDepartment()">
+            Departman Kaydet
+          </button>
+        </form>
+      </div>
+      <br />
+    </main>
+  </div>
+  
