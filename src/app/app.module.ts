@@ -20,6 +20,12 @@ import { AddPersonnelComponent } from './components/personnel/add-personnel/add-
 import { ListPersonnelComponent } from './components/personnel/list-personnel/list-personnel.component';
 import { AddShiftComponent } from './components/shift-page/add-shift/add-shift.component';
 import { ListShiftComponent } from './components/shift-page/list-shift/list-shift.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { AddDepartmentComponent } from './components/department/add-department/add-department.component';
+import { ListDepartmentComponent } from './components/department/list-department/list-department.component';
+import { DepartmentDetailComponent } from './components/department-detail/department-detail.component';
+import { UpdateDepartmentComponent } from './components/department-detail/update-department/update-department.component';
+import { DepartmentSpecificDetailComponent } from './components/department-detail/department-specific-detail/department-specific-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,12 @@ import { ListShiftComponent } from './components/shift-page/list-shift/list-shif
     ListPersonnelComponent,
     AddShiftComponent,
     ListShiftComponent,
+    DepartmentComponent,
+    AddDepartmentComponent,
+    ListDepartmentComponent,
+    DepartmentDetailComponent,
+    UpdateDepartmentComponent,
+    DepartmentSpecificDetailComponent,
   ],
   imports: [
     BrowserModule,
