@@ -26,6 +26,9 @@ import { ListDepartmentComponent } from './components/department/list-department
 import { DepartmentDetailComponent } from './components/department-detail/department-detail.component';
 import { UpdateDepartmentComponent } from './components/department-detail/update-department/update-department.component';
 import { DepartmentSpecificDetailComponent } from './components/department-detail/department-specific-detail/department-specific-detail.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -51,12 +54,18 @@ import { DepartmentSpecificDetailComponent } from './components/department-detai
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
     MatTableModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    })
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
