@@ -29,8 +29,8 @@ export class ListShiftComponent {
       this.hasPrevious = response.hasPrevious;
       this.hasNext = response.hasNext;
       this.pages = response.pages;
-      response.items.forEach(blog => {
-        this.shifts.push(blog);
+      response.items.forEach(shift => {
+        this.shifts.push(shift);
       });
       
       for (let i = 0; i < this.pages; i++) {
@@ -41,6 +41,7 @@ export class ListShiftComponent {
   }
 
   clickListItem(index:number){
+    //todo
     // var path = "shift-detail/"+this.shifts[index]["id"];
     // this.route.navigate([path]);
   }
