@@ -9,12 +9,18 @@ import { ShiftPageComponent } from './components/shift-page/shift-page.component
 import { PersonnelComponent } from './components/personnel/personnel.component';
 import { AddPersonnelComponent } from './components/personnel/add-personnel/add-personnel.component';
 import { ListPersonnelComponent } from './components/personnel/list-personnel/list-personnel.component';
+import { AddShiftComponent } from './components/shift-page/add-shift/add-shift.component';
+import { ListShiftComponent } from './components/shift-page/list-shift/list-shift.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about-us', component: AboutUsComponent, canActivate: [LoginGuard] },
   { path: 'contact', component: ContactUsComponent, canActivate: [LoginGuard] },
-  { path: 'shift-page', component: ShiftPageComponent },
+  { path: 'shift-page', component: ShiftPageComponent , 
+  children:[
+  { path: 'add-shift', component: AddShiftComponent },
+  { path: 'list-shift', component: ListShiftComponent },
+  ] },
 
   { path: 'personnel', component: PersonnelComponent, 
   children:[
