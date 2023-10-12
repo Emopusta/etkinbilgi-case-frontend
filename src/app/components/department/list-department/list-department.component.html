@@ -1,0 +1,32 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+    </nav>
+    <table id="dataTable" class="display">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Department Name</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of departments">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td><a href="department-detail/{{item.id}}">details</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <nav aria-label="Page navigation">
+            <ul class="paginate">
+                <button  [disabled]="!hasPrevious" (click)="previousButton()">Previous</button>
+                <button *ngFor="let item of counter;let i = index" (click)="spesificButton(i)" >{{i+1}}</button>
+                <button  [disabled]="!hasNext" (click)="nextButton()">Next</button>
+            </ul>
+        </nav>
+    </div>
+    </div>
