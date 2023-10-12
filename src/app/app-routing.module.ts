@@ -11,6 +11,12 @@ import { AddPersonnelComponent } from './components/personnel/add-personnel/add-
 import { ListPersonnelComponent } from './components/personnel/list-personnel/list-personnel.component';
 import { AddShiftComponent } from './components/shift-page/add-shift/add-shift.component';
 import { ListShiftComponent } from './components/shift-page/list-shift/list-shift.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { AddDepartmentComponent } from './components/department/add-department/add-department.component';
+import { ListDepartmentComponent } from './components/department/list-department/list-department.component';
+import { DepartmentDetailComponent } from './components/department-detail/department-detail.component';
+import { UpdateDepartmentComponent } from './components/department-detail/update-department/update-department.component';
+import { DepartmentSpecificDetailComponent } from './components/department-detail/department-specific-detail/department-specific-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -18,17 +24,30 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent, canActivate: [LoginGuard] },
   { path: 'shift-page', component: ShiftPageComponent , 
   children:[
-  { path: 'add-shift', component: AddShiftComponent },
+  { path: 'add-shift', component: AddShiftComponent, canActivate: [LoginGuard]},
   { path: 'list-shift', component: ListShiftComponent },
   ] },
 
   { path: 'personnel', component: PersonnelComponent, 
   children:[
-  { path: 'add-personnel', component: AddPersonnelComponent },
+  { path: 'add-personnel', component: AddPersonnelComponent, canActivate: [LoginGuard] },
   { path: 'list-personnel', component: ListPersonnelComponent },
   ] },
+
+  { path: 'department', component: DepartmentComponent, 
+  children:[
+  { path: 'add-department', component: AddDepartmentComponent, canActivate: [LoginGuard] },
+  { path: 'list-department', component: ListDepartmentComponent },
+  ] },
   
+  { path: 'department-detail/:id', component: DepartmentDetailComponent, canActivate: [LoginGuard], 
+  children:[
+    { path: '', component: DepartmentSpecificDetailComponent },
+    { path: 'update-department/:id', component: UpdateDepartmentComponent },
+  ]  },
+
   { path: 'login', component: LoginComponent },
+
 ];
 
 @NgModule({
