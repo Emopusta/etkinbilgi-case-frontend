@@ -18,6 +18,8 @@ import { MatTableModule } from '@angular/material/table';
 import { PersonnelComponent } from './components/personnel/personnel.component';
 import { AddPersonnelComponent } from './components/personnel/add-personnel/add-personnel.component';
 import { ListPersonnelComponent } from './components/personnel/list-personnel/list-personnel.component';
+import { AddShiftComponent } from './components/shift-page/add-shift/add-shift.component';
+import { ListShiftComponent } from './components/shift-page/list-shift/list-shift.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ListPersonnelComponent } from './components/personnel/list-personnel/li
     PersonnelComponent,
     AddPersonnelComponent,
     ListPersonnelComponent,
+    AddShiftComponent,
+    ListShiftComponent,
   ],
   imports: [
     BrowserModule,
